@@ -1,0 +1,265 @@
+﻿<Window x:Class="keyboard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:keyboard"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="475" Width="990">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                <TextBlock Text="Speed:" FontSize="18"/>
+                <TextBlock Text="0" FontSize="18" Margin="5,0,3,0"/>
+                <TextBlock Text="chars/min" FontSize="18"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                <TextBlock Text="Fails:" FontSize="18"/>
+                <TextBlock Text="0" FontSize="18" Margin="5,0,0,0"/>
+            </StackPanel>
+
+            <Grid Grid.Row="0" Grid.Column="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                    <TextBlock Text="Difficulty:" FontSize="18"/>
+                    <TextBlock Text="0" FontSize="18" Margin="5,0,0,0"/>
+                </StackPanel>
+
+                <Slider Grid.Column="1"/>
+            </Grid>
+
+            <CheckBox Grid.Row="0" Grid.Column="3" Content="Case Sensitive" FontSize="18"/>
+
+            <Button Grid.Row="1" Grid.Column="2" Content="Start" FontSize="18"/>
+            <Button Grid.Row="1" Grid.Column="3" Content="Stop" FontSize="18"/>
+        </Grid>
+
+        <Grid Grid.Row="1" Background="LightBlue">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" FontSize="20"/>
+            <TextBlock Grid.Row="1" FontSize="20"/>
+        </Grid>
+
+        <StackPanel Grid.Row="2">
+            <StackPanel Orientation="Horizontal">
+                <Border x:Name="tildaButton" Background="#f97796" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="`" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border x:Name="oneButton" Background="#f97796" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="1" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border x:Name="twoButton" Background="#f97796" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="2" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border x:Name="threeButton" Background="#e6f076" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="3" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border x:Name="fourButton" Background="#7ef077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="4" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border x:Name="fiveButton" Background="#76bef0" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="5" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border x:Name="sixButton" Background="#76bef0" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="6" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border x:Name="sevenButton" Background="#db77f1" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="7" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border x:Name="eightButton" Background="#db77f1" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="8" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border x:Name="nineButton" Background="#f97796" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="9" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border x:Name="zeroButton" Background="#e6f076" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border x:Name="minusButton" Background="#7ef077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="-" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border x:Name="equalButton" Background="#7ef077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="=" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border x:Name="backspaceButton" Background="#b5b5b5" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="110">
+                    <TextBlock Text="Backspace" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+                </Border>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal">
+                <Border x:Name="tabButton" Background="#b5b5b5" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="85">
+                    <TextBlock Text="Tab" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+                </Border>
+                <Border x:Name="qButton" Background="#f97796" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="q" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border x:Name="wButton" Background="#e6f076" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="w" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border x:Name="eButton" Background="#7ef077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="e" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border x:Name="rButton" Background="#76bef0" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="r" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border x:Name="tButton" Background="#76bef0" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="t" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border x:Name="yButton" Background="#db77f1" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="y" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border x:Name="uButton" Background="#db77f1" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="u" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border x:Name="iButton" Background="#f97796" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="i" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border x:Name="oButton" Background="#e6f076" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="o" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border x:Name="pButton" Background="#7ef077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="p" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border Background="#7ef077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="[" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border Background="#7ef077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="]" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border Background="#7ef077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="85">
+                    <TextBlock Text="\" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Border Background="#b5b5b5" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="119">
+                    <TextBlock Text="Caps Lock" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+                </Border>
+                <Border Background="#f97796" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="a" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border Background="#e6f076" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="s" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border Background="#7ef077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="d" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border Background="#76bef0" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="f" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border Background="#76bef0" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="g" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border Background="#db77f1" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="h" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border Background="#db77f1" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="j" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border Background="#f97796" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="k" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border Background="#e6f076" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="l" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border Background="#7ef077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text=";" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border Background="#7ef077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="'" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border Background="#b5b5b5" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="118">
+                    <TextBlock Text="Enter" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+                </Border>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Border Background="#b5b5b5" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="152">
+                    <TextBlock Text="Shift" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+                </Border>
+                <Border Background="#f97796" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="z" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border Background="#e6f076" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="x" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border Background="#7ef077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="c" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border Background="#76bef0" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="v" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border Background="#76bef0" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="b" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border Background="#db77f1" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="n" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border Background="#db77f1" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="m" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border Background="#f97796" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="," HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border Background="#e6f076" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="." HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border Background="#7ef077" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="60">
+                    <TextBlock Text="/" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40"/>
+                </Border>
+                <Border Background="#b5b5b5" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="151">
+                    <TextBlock Text="Shift" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+                </Border>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Border Background="#b5b5b5" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="85">
+                    <TextBlock Text="Ctrl" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+                </Border>
+                <Border Background="#b5b5b5" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="85">
+                    <TextBlock Text="Win" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+                </Border>
+                <Border Background="#b5b5b5" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="85">
+                    <TextBlock Text="Alt" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+                </Border>
+                <Border Background="#e5bb71" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="423">
+                    <TextBlock Text="Space" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+                </Border>
+                <Border Background="#b5b5b5" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="85">
+                    <TextBlock Text="Alt" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+                </Border>
+                <Border Background="#b5b5b5" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="85">
+                    <TextBlock Text="Win" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+                </Border>
+                <Border Background="#b5b5b5" BorderBrush="Black" BorderThickness="2" CornerRadius="10" Margin="3" Height="60" Width="85">
+                    <TextBlock Text="Ctrl" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+                </Border>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
